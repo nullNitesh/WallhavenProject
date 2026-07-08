@@ -1,0 +1,20 @@
+{
+  "name": "wallhaven-downloader",
+  "version": "1.0.0",
+  "description": "Browse Wallhaven wallpapers and download them directly to ~/Downloads/Wallpaper/",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -n frontend,backend -c cyan,magenta \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "dev:frontend": "vite",
+    "dev:backend": "node server/index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "vite": "^6.3.5"
+  }
+}
