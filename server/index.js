@@ -13,7 +13,7 @@ const app = express();
 const PORT = 3001;
 
 // Target download directory
-const DOWNLOAD_DIR = path.join(homedir(), 'Downloads', 'Wallpaper');
+const DOWNLOAD_DIR = path.join(homedir(), 'Downloads', 'Wallpaper', 'Wallhaven');
 
 // Middleware
 app.use(cors({ origin: 'http://localhost:5173' }));
@@ -24,7 +24,7 @@ app.use(express.json());
  * Body: { imageUrl: string, id: string }
  *
  * Fetches the full-resolution image from Wallhaven CDN
- * and saves it to ~/Downloads/Wallpaper/wallhaven-<id>.<ext>
+ * and saves it to ~/Downloads/Wallpaper/Wallhaven/wallhaven-<id>.<ext>
  */
 app.post('/api/download', async (req, res) => {
   const { imageUrl, id } = req.body;

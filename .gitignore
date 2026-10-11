@@ -6,7 +6,7 @@ package-lock.json
 dist/
 
 # Environment secrets
-.env.example
+.env
 
 # Agent context
 .agents/
